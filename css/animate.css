@@ -8,6 +8,15 @@
  * Copyright (c) 2016 Daniel Eden
  */
 
+ .blink_text {
+
+     animation:1s blinker linear infinite;
+     -webkit-animation:1s blinker linear infinite;
+     -moz-animation:1s blinker linear infinite;
+
+      color: red;
+     }
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

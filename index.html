@@ -32,10 +32,10 @@
 	<script type="text/javascript" src="js/move-top.js"></script>
 	<script type="text/javascript" src="js/easing.js"></script>
 		<script type="text/javascript">
-			jQuery(document).ready(function($) {
+			$(document).ready(function($) {
 				$(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({scrollTop:$(this.hash).offset().top},2000);
+                //event.preventDefault();
+                //$('html,body').animate({scrollTop:$(this.hash).offset().top},2000);
             });
 			});
 		</script>
@@ -61,7 +61,96 @@
     margin: 0 15px 15px 15px;
     background: transparent;
 }
+
+.blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     color: red;
+    }
+
+    @-moz-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+
+		 /* Dropdown Button */
+		 .dropbtn {
+			 color: #0c0c0c;
+				border: none;
+				background: none;
+				font-size: 18px;
+				padding-top: 48px;
+				text-decoration: none;
+				font-family: "segoeui";
+		 }
+
+		 /* The container <div> - needed to position the dropdown content */
+		 .dropdown {
+		     position: relative;
+		     display: inline-block;
+		 }
+
+		 /* Dropdown Content (Hidden by Default) */
+		 .dropdown-content {
+			   font-family: "segoeui";
+		     display: none;
+		     position: absolute;
+		     background-color: #f1f1f1;
+		     min-width: 160px;
+		     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		     z-index: 1;
+		 }
+
+		 /* Links inside the dropdown */
+		 .dropdown-content a {
+		     color: black;
+		     padding: 12px 16px;
+		     text-decoration: none;
+		     display: block;
+		 }
+
+		 /* Change color of dropdown links on hover */
+		 .dropdown-content a:hover {background-color: #ddd}
+
+		 /* Show the dropdown menu on hover */
+		 .dropdown:hover .dropdown-content {
+		     display: block;
+		 }
+
+		 /* Change the background color of the dropdown button when the dropdown content is shown */
+		 .dropdown:hover .dropbtn {
+		    color: #a02341;
+		 }
+
+		 .price-tag img{ height: 231px !important; width: 260px !important;}
+		 .cus-read-more{
+			     background-color: #a02341;
+			     color: #ffffff;
+			     padding-left: 20px;
+			     padding-right: 20px;
+			     font-size: 16px;
+		 }
+
 </style>
+
+
 </head>
 
 <body>
@@ -80,22 +169,39 @@
 						<span class="icon-bar"></span>
 					</button>
 				  <a class="navbar-brand logo" href="#"><img src="./images/mlogo.png" alt="logo image"></a>
+					<br>
 				</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#home" class="active scroll wow fadeInDownBig" data-wow-delay=".1s">Home</a></li>
-						<li><a href="#new" class="scroll wow fadeInDownBig" data-wow-delay=".3s">New</a></li>
+						<li><a href="#ome" class="active scroll wow fadeInDownBig" data-wow-delay=".1s">Home</a></li>
 						<li><a href="#about" class="scroll wow fadeInDownBig" data-wow-delay=".5s">About Us</a></li>
+						<li><a href="#new" class="scroll wow fadeInDownBig" data-wow-delay=".3s">Quality Excellence</a></li>
+
 						<li><a href="#catalogue" class="scroll wow fadeInDownBig" data-wow-delay=".7s">Catalogue</a></li>
+						<!--<li><a href="#certificates" >Certificates</a>-->
+						<li>
+							<div class="dropdown scroll wow fadeInDownBig animated">
+								<button class="dropbtn">Certificates</button>
+								<div class="dropdown-content">
+
+
+									<a href="./images/Certificates/final_045.jpg" target="_blank">CPFC </a>
+
+									<a href="./images/Certificates/HS catalogue Peerless 08.01.2018 final_048.jpg"  target="_blank">ISO 9001 </a>
+									<a href="./images/Certificates/HS catalogue Peerless 08.01.2018 final_049.jpg"  target="_blank">ISO 14001 </a>
+									<a href="./images/Certificates/HS catalogue Peerless 08.01.2018 final_050.jpg"  target="_blank">Lab Test </a>
+								</div>
+							</div>
+						</li>
 						<li><a href="#contact" class="scroll wow fadeInDownBig" data-wow-delay=".9s">Contact</a></li>
 					</ul>
 				</div><!-- navbar-collapse -->
 
 				<div class="header-content">
-					<h1 class="wow bounceIn" data-wow-delay="0.50s"> Peerless </h1>
-					<h2 class="wow fadeInUp" data-wow-delay="0.90s"> Some thing special </h2>
+					<h1 class="wow bounceIn" data-wow-delay="0.50s">  </h1>
+					<h2 class="wow fadeInUp" data-wow-delay="0.90s"> </h2>
 				</div> <!-- Header Content Ends Here -->
 				  <div class="clearfix"> </div>
 			</div><!-- container -->
@@ -150,7 +256,7 @@
   <div class="container">
 	<div class="padding-new" id="new">
 
-		<h3 id="na">Quality Excellence</h3>
+		<h3 id="na">Quality Excellence of Hacker Smart</h3>
 
 		<div class="new-content">
 
@@ -228,7 +334,7 @@
 					<div class="col-md-6 new-t">
 						<div class="new-text wow fadeInLeft animated" data-wow-delay=".5s">
 							<h4  class="wow fadeInLeft animated" data-wow-delay=".5s">4</h4>
-							<p class="wow fadeInLeft animated" style="font-size: 14px;line-height: 24px;" data-wow-delay=".5s">Perfect edge – optimal gluing, Häcker SMART
+							<p class="wow fadeInLeft animated" data-wow-delay=".5s">Perfect edge – optimal gluing, Häcker SMART
 								kitchens consistently use the premium quality,
 								water resist PUR gluing for all edges. A
 								polyurethane reaction adhesive free from
@@ -305,16 +411,30 @@
 
 <div class="about" id="about">
 	<div class="container">
-		<div id="xx"class="about-content wow fadeInRight animated" data-wow-delay=".2s">
+		<div id="xx"class="about-content wow fadeInRight animated" data-wow-delay=".2s" style="BACKGROUND: #ffffff2e;
+    padding-left: 15px;
+    padding-right: 15px;">
 			<h3 id="ab">  About Us </h3>
-			<p>Peerless (Pvt.) Ltd. forms the trading arm of Envoy Holdings and focuses on enhancing the retail experience in Sri Lanka by building their portfolio comprising of globally trusted brands such as Hafele-India, Peerless Foods Australia, Hacker Smart Kitchen, Brandts, Metaltex and Eurographics, SBT Global Car Exporter.
+			<p>
+				Peerless (Pvt.) Ltd. forms the trading arm of Envoy Holdings and focuses on enhancing the retail experience in Sri Lanka by building their portfolio comprising of globally trusted brands such as Hafele-India, Peerless Foods Australia, Hacker Smart Kitchen, Brandts appliances, Metaltex, Eurographics and SBT Global Car Exporter.<br>
+
+				For us, brand stewardship involves a long-term approach in maintaining the brand promise and brand relationships that create and sustain brand equity.
+				Every product collection is distinctively chosen to give you solutions which are made to meet your highest expectations. At the heart of our company lies a desire to create a retail experience that delights our customers, and to be renowned for quality and reliability.<br>
+
+				Our handpicked team combine with over decade of experience to ensure our clients receive not only the pinnacle of design and technology but also a fully managed turnkey solution ensuring complete peace of mind.
+
+
 			</p>
 
-			<h3 id="ab"> Vision, Mission and Values </h3>
-			<p>The Group’s representations and strategic alliances with reputed global institutions and large multinational corporations confirm its unparalleled local stature.
+			<h3 id="ab"> Vision </h3>
+			<p>To be a unique, state-of-the-art, trading company, delivering global standards locally.
 			</p>
-			<h3 id="ab"></h3>
+			<h3 id="ab">Mission</h3>
 			<p>
+				Continuously strive to be the trusted professional partner to all our stakeholders by demonstrating ownership through initiative, accountability, trust and collaboration.<br>
+
+				The Group’s representations and strategic alliances with reputed global institutions and large multinational corporations confirm its unparalleled local stature.
+
 			</p>
 		</div>
 	</div>
@@ -345,7 +465,7 @@
 
 										<li class="col-md-3 scene">
 											<div class="frontview" onclick="return true">
-												<div class="price-tag"> <img src="./images/upload/acasia.jpg" alt="image" style="height: 260px;"></div>
+												<div class="price-tag"> <img src="./images/upload/acasia.jpg" alt="image" style="height: 231px;"></div>
 													<div class="info">
 														<header>
 															<h5>ACCACIA</h5>
@@ -654,7 +774,7 @@
 														<span class="dollar">Rs.</span>
 														<span class="rating">3,379</span>
 														<p>Cup holder - for 10 mugs Product dimensions 14 x 28 x 6 cm</p>
-														<a href="./images/pdf/slim_line.pdf" target="_blank"><span class="label label-success " style="font-size: 120%;">clieck here to more</span></a>
+														<a href="./images/pdf/36.49.28.JPG" target="_blank"><span class="label label-success " style="font-size: 120%;">clieck here to more</span></a>
 													</header>
 												</div>
 											</div>
@@ -779,6 +899,9 @@
 
 							  <div class="clearfix"> </div>
 							</div>
+
+							<a href="MetalTexmore.html" target="_blank"><button class="btn btn-default cus-read-more">test</button></a>
+
 						</div>
 					</div>
 
@@ -874,11 +997,16 @@
 			<div class="col-md-3 address services wow fadeInLeft animated" data-wow-delay=".6s">
 				<h4>Address</h4>
 					<address>
-						Level 10, East Tower,<br>
+						Level 06, East Tower,<br>
 						World Trade Center,<br>
 						Colombo 01, Sri Lanka<br>
 
-						<span>Phone : +94 770 473 064</span>
+						<span>Phone : +94 114 335 339</span>
+						<span>Phone : +94 112 321 433</span>
+						<span>Email : sales@peerlessventure.com</span>
+
+						<span class="blink_text">Hotline : +94 114 335 339</span>
+
 					</address>
 			</div>
 
@@ -914,7 +1042,7 @@
 			<!--start-copyright-->
 			<div class="copy-right">
 
-					<p>&copy; Peerless.  All Rights  Reserved | Designed by <a href="http://amasolveit.com/">Amasolve</a></p>
+					<p>&copy; Peerless.  All Rights  Reserved </a></p>
 
 			</div>
 			<!--//end-copyright-->
